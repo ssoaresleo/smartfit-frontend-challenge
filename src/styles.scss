@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/gotham-light.woff2") format('woff2');
+  }
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/gotham-book.woff2") format('woff2');
+  }
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/gotham-bold.woff2") format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("/fonts/ghotam-black.woff2") format('woff2');
+  }
+}

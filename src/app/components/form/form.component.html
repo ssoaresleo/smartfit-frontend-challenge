@@ -17,14 +17,24 @@
       class="w-full py-2 pt-5 flex items-start justify-between border-y border-gray-300"
     >
       <div class="flex items-center justify-start">
-        <input type="radio" id="morning" formControlName="hour" value="morning"/>
+        <input
+          type="radio"
+          id="morning"
+          formControlName="hour"
+          value="morning"
+        />
         <label class="ml-3" for="morning">Manhã</label>
       </div>
       <span>06:00 às 12:00</span>
     </div>
     <div class="w-full py-2 flex items-start justify-between">
       <div class="flex items-center justify-start">
-        <input type="radio" id="afternoon" formControlName="hour" value="afternoon"/>
+        <input
+          type="radio"
+          id="afternoon"
+          formControlName="hour"
+          value="afternoon"
+        />
         <label class="ml-3" for="afternoon">Tarde</label>
       </div>
       <span>12:01 às 18:00</span>
@@ -33,7 +43,7 @@
       class="w-full py-2 flex items-start justify-between border-y border-gray-300"
     >
       <div class="flex items-center justify-start">
-        <input type="radio" id="night" formControlName="hour" value="night"/>
+        <input type="radio" id="night" formControlName="hour" value="night" />
         <label class="ml-3" for="night">Noite</label>
       </div>
       <span>18:01 às 23:00</span>
@@ -41,22 +51,31 @@
 
     <div class="flex items-center justify-between w-full mt-8 text-dark-grey">
       <div class="flex items-center justify-start gap-3">
-        <input type="checkbox" value="showClosed" formControlName="showClosed"/>
+        <input
+          type="checkbox"
+          value="showClosed"
+          formControlName="showClosed"
+        />
         <label for="">Exibir unidades fechadas</label>
       </div>
       <span
-        >Resultados encontrados: <span class="font-black text-lg">0</span></span
+        >Resultados encontrados:
+        <span class="font-black text-lg">{{
+          filteredResults.length
+        }}</span></span
       >
     </div>
 
     <div class="flex items-center justify-center gap-5 mx-auto w-full mt-8">
       <button
         class="uppercase text-sm font-bold rounded-sm px-10 py-3 text-black bg-yellow"
+        (click)="onSubmit()"
       >
         Encontrar Unidade
       </button>
       <button
         class="uppercase text-sm font-bold rounded-sm px-10 py-3 text-black border border-dark-grey"
+        (click)="onClean()"
       >
         Limpar
       </button>

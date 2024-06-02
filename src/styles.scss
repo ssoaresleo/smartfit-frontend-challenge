@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    font-family: "Gotham";
+  }
+
   @font-face {
     font-family: 'Gotham';
     font-style: normal;
